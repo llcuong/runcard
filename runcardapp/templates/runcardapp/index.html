@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runcard</title>
+    <link rel="icon" href="data:,">
+    <style>
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <style>
+        .date-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        input[type="date"] {
+            appearance: none;
+            border: none;
+            background: none;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        input[type="date"]::before{
+            content: "🧧";
+            position: absolute;
+            font-size: 28px;
+            line-height: 1;
+            color: #007BFF;
+            pointer-events: none;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            width: 32px;
+            opacity: 0;
+        }
+
+        input[type="date"]::-moz-focus-inner {
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="column-1">
+                <div class="column-1-row-1">
+                    <form method="get" id="date-form">
+                        <div class="date-container">
+                            {{ date_form.as_p }}
+                        </div>
+                    </form>
+                    {% if selected_date %}
+                        <p>{{ selected_date }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('input[type="date"]').addEventListener('change', function() {
+            document.getElementById('date-form').submit();
+        });
+    </script>
+</body>
+</html>
