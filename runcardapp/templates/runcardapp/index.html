@@ -17,36 +17,36 @@
         .date-container {
             position: relative;
             display: inline-block;
+            width: 32px;
+            height: 32px;
         }
 
         input[type="date"] {
-            appearance: none;
-            border: none;
             background: none;
-            width: 32px;
-            height: 32px;
-            padding: 0;
-            cursor: pointer;
-            overflow: hidden;
-        }
-
-        input[type="date"]::before{
-            content: "🧧";
-            position: absolute;
-            font-size: 28px;
-            line-height: 1;
-            color: #007BFF;
-            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            color: transparent;
         }
 
         input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 1;
             cursor: pointer;
-            width: 32px;
-            opacity: 0;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
         }
 
         input[type="date"]::-moz-focus-inner {
             border: 0;
+        }
+
+        input[type="date"]:focus {
+            outline: none;
         }
     </style>
 </head>

@@ -74,30 +74,30 @@ WSGI_APPLICATION = 'runcard.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'PMGMES',
-        'USER': 'scadauser',
-        'PASSWORD': 'pmgscada+123',
-        'HOST': '10.13.102.22',
-        'PORT': '1433',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-        },
-    },
-    'VNEDC': {
-        'ENGINE': 'mssql',
-        'NAME': 'VNEDC',
-        'USER': 'vnedc',
-        'PASSWORD': 'vnedc#2024',
-        'HOST': '192.168.11.31',
-        'PORT': '1433',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-        },
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mssql',
+#         'NAME': 'PMGMES',
+#         'USER': 'scadauser',
+#         'PASSWORD': 'pmgscada+123',
+#         'HOST': '10.13.102.22',
+#         'PORT': '1433',
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 17 for SQL Server',
+#         },
+#     },
+#     'VNEDC': {
+#         'ENGINE': 'mssql',
+#         'NAME': 'VNEDC',
+#         'USER': 'vnedc',
+#         'PASSWORD': 'vnedc#2024',
+#         'HOST': '192.168.11.31',
+#         'PORT': '1433',
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 17 for SQL Server',
+#         },
+#     }
+# }
 
 
 # Password validation
